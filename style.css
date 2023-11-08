@@ -1,5 +1,6 @@
 /* test méthode smacss avec base, layout, module et state pour le JS */
 
+/* html, body */
 
 /* base */
 
@@ -34,21 +35,92 @@ img {
 
 .notification {
     display: grid;
-    grid-template-columns:1fr 8fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 8fr;
+    grid-gap: 2px;
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     margin: 5px;
     padding: 10px;
 }
 
 
 .notification .photo {
-    grid-row: span 2; /* Set to span 2 rows */
-  }
-  
+    grid-row: span 2;
+    /* Set to span 2 rows */
+}
 
-  .notification :nth-child(3) {
+
+.notification :nth-child(3) {
     grid-row: span 1;
     grid-column: 2;
-  }
+}
+
+.notification .photoechec {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+
+
+/* modules */
+
+.mark-as-read {
+    color: rgb(109, 108, 108);
+    ;
+}
+
+.message-write {
+    padding: 15px;
+    border: 1px solid rgb(226, 226, 226);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: rgb(131, 128, 128);
+}
+
+.notification-count {
+    background-color: rgb(23, 41, 122);
+    color: #FFF;
+    padding: 1px 10px 1px 10px;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.message-text p {
+    color: rgb(109, 108, 108);
+}
+
+.message-text p span {
+    color: black;
+    font-weight: bold;
+}
+
+.message-text p .span2 {
+    color: rgb(80, 80, 80);
+    font-weight: bold;
+}
+
+.message-text p .chessclub {
+    color: hsl(219, 85%, 26%);
+    font-weight: bold;
+}
+
+.notification .heure {
+    color: rgb(141, 140, 140);
+}
+
+
+
+@media (max-width: 670px) {
+
+
+    .container {
+        max-width: 90%;
+        margin: 50px auto;
+    }
+
+    img {
+        padding-right: 10px;
+    }
+
+
+}
