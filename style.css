@@ -58,6 +58,7 @@ img {
 .notification .photoechec {
     grid-column: 3;
     grid-row: 1 / span 2;
+    cursor: pointer;
 }
 
 
@@ -73,6 +74,7 @@ img {
     color: hsl(218, 68%, 27%);
     transition: 0.4s;
 }
+
 
 .message-write {
     padding: 15px;
@@ -107,6 +109,13 @@ img {
     color: black;
     font-weight: bold;
     cursor: pointer;
+}
+
+.message-text .nom:hover {
+    color: hsl(218, 69%, 34%);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .message-text p .span2 {
