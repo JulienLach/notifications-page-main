@@ -66,7 +66,12 @@ img {
 
 .mark-as-read {
     color: rgb(109, 108, 108);
-    ;
+    cursor: pointer;
+}
+
+.mark-as-read:hover {
+    color: hsl(218, 68%, 27%);
+    transition: 0.4s;
 }
 
 .message-write {
@@ -75,6 +80,15 @@ img {
     margin-top: 10px;
     margin-bottom: 15px;
     color: rgb(131, 128, 128);
+    border-radius: 5px;
+}
+
+.message-write:hover {
+    cursor: pointer;
+    background-color: rgba(219, 245, 255, 0.884);
+    transition: 0.3s;
+    border-radius: 5px;
+    border: 1px solid rgba(219, 245, 255, 0.884);
 }
 
 .notification-count {
@@ -92,11 +106,13 @@ img {
 .message-text p span {
     color: black;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .message-text p .span2 {
     color: rgb(80, 80, 80);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .message-text p .chessclub {
