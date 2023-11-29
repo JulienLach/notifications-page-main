@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const notifications = document.querySelectorAll('.notification');
     const redDots = document.querySelectorAll('.red-dot');
+    const markAll = document.getElementById('mark-all');
+
 
     notifications.forEach((notification, index) => {
         notification.addEventListener('click', () => {
@@ -8,4 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
             redDots[index].classList.toggle('active');
         });
     });
+
+    markAll.addEventListener('click', () => {
+        notifications.forEach((notification, index) => {
+            notification.classList.remove('active');
+            redDots[index].classList.remove('active');
+        });
+    });
+
+
+
 });
